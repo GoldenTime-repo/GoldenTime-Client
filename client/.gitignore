@@ -26,6 +26,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #lint
-.eslintrc.json
+.eslintrc
 .prettierrc
 
