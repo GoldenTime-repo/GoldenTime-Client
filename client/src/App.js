@@ -1,7 +1,8 @@
-import Header from './components/UI/organisms/Header';
+import { Route } from 'react-router-dom';
+import MainPages from './components/pages/MainPages';
 
 function App() {
-  return <Header />;
+  return <Route path="/" component={MainPages} />;
 }
 
 export default App;

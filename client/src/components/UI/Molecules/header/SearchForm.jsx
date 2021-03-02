@@ -16,7 +16,7 @@ const SearchForm = () => {
   return (
     <SearchFormBlock>
       <Input type="text" placeholder="찾으시는 상품을 입력하세요." header />
-      <Icons search />
+      <Icons search="true" />
     </SearchFormBlock>
   );
 };

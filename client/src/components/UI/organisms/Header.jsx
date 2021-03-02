@@ -16,13 +16,13 @@ const Wrapper = styled(Responsive)`
   align-items: center;
 `;
 
-const Header = () => {
+const Header = ({ location }) => {
   return (
     <HeaderBlock>
       <Wrapper>
         <HeaderLeft />
         <SearchForm />
-        <HeaderRight />
+        <HeaderRight location={location} />
       </Wrapper>
     </HeaderBlock>
   );

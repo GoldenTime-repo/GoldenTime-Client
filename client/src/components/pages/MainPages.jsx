@@ -1,8 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect } from 'react';
+
+import MainTemplate from '../templates/MainTemplate';
+import useGetLocation from '../../hooks/location/useGetLocation';
 
 const MainPages = () => {
-  return;
+  const { location, errorMessage, getLocation } = useGetLocation();
+  useEffect(() => {
+    getLocation();
+  }, [location, errorMessage]);
+  return <MainTemplate location={location} />;
 };
 
 export default MainPages;
