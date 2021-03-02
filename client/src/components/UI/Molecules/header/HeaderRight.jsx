@@ -16,10 +16,10 @@ const LocationInfo = styled(Paragraph)`
   text-align: center;
 `;
 
-const HeaderRight = () => {
+const HeaderRight = ({ location }) => {
   return (
     <HeaderRIghtBlock>
-      <LocationInfo>위치정보</LocationInfo>
+      <LocationInfo>현재위치는 {location}입니다.</LocationInfo>
       <Button bold>로그인</Button>
     </HeaderRIghtBlock>
   );
