@@ -15,6 +15,25 @@ const styleButton = css`
     css`
       font-weight: bold;
     `}
+
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `}
+
+    ${(props) =>
+    props.black &&
+    css`
+      background: #212529;
+      color: #fff;
+    `}
+
+    ${(props) =>
+    props.softly &&
+    css`
+      color: #868e96;
+    `}
 `;
 
 const LinkStyle = styled(Link)`
