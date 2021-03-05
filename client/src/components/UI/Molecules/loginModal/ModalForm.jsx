@@ -46,7 +46,7 @@ const SocialLabel = styled.fieldset`
 `;
 
 const type = 'login';
-const ModalForm = () => {
+const ModalForm = ({ google, kakao, type }) => {
   return (
     <ModalFormBlock>
       <form>
@@ -59,11 +59,11 @@ const ModalForm = () => {
             </ButtonStyle>
             <SocialLabel>
               <legend>소셜 로그인</legend>
-              <Button>
-                <Icons google />
+              <Button onClick={(e) => google(e)}>
+                <Icons google={'true'} />
               </Button>
-              <Button>
-                <Icons kakao />
+              <Button onClick={(e) => kakao(e)}>
+                <Icons kakao={'true'} />
               </Button>
             </SocialLabel>
           </>

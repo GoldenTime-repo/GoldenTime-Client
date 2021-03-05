@@ -26,13 +26,18 @@ const ButtonStyle = styled(Button)`
   }
 `;
 
-const type = 'login';
-const ModalFooter = () => {
+const ModalFooter = ({ type, handleTypeChange }) => {
   return (
     <ModalFooterBlock>
       <FormTypeButtonBlock>
-        <Paragraph>아직 회원이 아니신가요?</Paragraph>
-        <ButtonStyle softly>회원가입</ButtonStyle>
+        <Paragraph>
+          {type === 'login'
+            ? '아직 회원이 아니신가요?'
+            : '계정이 이미 있으신가요?'}
+        </Paragraph>
+        <ButtonStyle onClick={handleTypeChange} softly>
+          {type === 'login' ? '회원가입' : '로그인'}
+        </ButtonStyle>
       </FormTypeButtonBlock>
     </ModalFooterBlock>
   );

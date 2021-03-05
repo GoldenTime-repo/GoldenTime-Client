@@ -20,13 +20,26 @@ const FullScreen = styled.div`
 `;
 
 const modal = true;
-const MainTemplate = ({ location }) => {
+const MainTemplate = ({
+  location,
+  google,
+  kakao,
+  modal,
+  onModal,
+  type,
+  handleTypeChange,
+}) => {
   return (
     <>
-      <Header location={location} />
+      <Header location={location} onModal={onModal} />
       {modal && (
         <FullScreen>
-          <LoginModal></LoginModal>
+          <LoginModal
+            google={google}
+            kakao={kakao}
+            type={type}
+            handleTypeChange={handleTypeChange}
+          ></LoginModal>
         </FullScreen>
       )}
     </>

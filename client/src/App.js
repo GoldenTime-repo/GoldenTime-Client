@@ -1,8 +1,12 @@
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import MainPages from './components/pages/MainPages';
 
 function App() {
-  return <Route path="/" component={MainPages} />;
+  return (
+    <Switch>
+      <Route path="/" component={MainPages} />
+    </Switch>
+  );
 }
 
 export default App;
