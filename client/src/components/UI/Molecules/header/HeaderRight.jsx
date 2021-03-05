@@ -16,11 +16,13 @@ const LocationInfo = styled(Paragraph)`
   text-align: center;
 `;
 
-const HeaderRight = ({ location }) => {
+const HeaderRight = ({ location, onModal }) => {
   return (
     <HeaderRIghtBlock>
       <LocationInfo>현재위치는 {location}입니다.</LocationInfo>
-      <Button bold>로그인</Button>
+      <Button onClick={onModal} bold>
+        로그인
+      </Button>
     </HeaderRIghtBlock>
   );
 };

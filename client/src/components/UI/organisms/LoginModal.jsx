@@ -17,12 +17,12 @@ const WhiteBox = styled.div`
   border-radius: 10px;
 `;
 
-const LoginModal = () => {
+const LoginModal = ({ google, kakao, type, handleTypeChange }) => {
   return (
     <WhiteBox>
       <ModalHeader />
-      <ModalForm />
-      <ModalFooter />
+      <ModalForm google={google} kakao={kakao} type={type} />
+      <ModalFooter type={type} handleTypeChange={handleTypeChange} />
     </WhiteBox>
   );
 };
