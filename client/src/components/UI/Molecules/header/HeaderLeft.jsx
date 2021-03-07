@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Button from '../../Atoms/Button';
 import Image from '../../Atoms/Image';
 
 const HeaderLeftBlock = styled.div`
@@ -10,7 +11,9 @@ const HeaderLeftBlock = styled.div`
 const HeaderLeft = () => {
   return (
     <HeaderLeftBlock>
-      <Image src="/images/goldenTimeLogo.png" alt="logo" logo />
+      <Button>
+        <Image src="/images/goldenTimeLogo.png" alt="logo" logo />
+      </Button>
     </HeaderLeftBlock>
   );
 };

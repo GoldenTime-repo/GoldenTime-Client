@@ -7,12 +7,12 @@ import Button from '../../Atoms/Button';
 const HeaderRIghtBlock = styled.div`
   flex: 1.5;
   display: flex;
-  justify-content: space-between;
-  padding-left: 20px;
+  justify-content: space-around;
+  margin-left: 30px;
 `;
 
 const LocationInfo = styled(Paragraph)`
-  width: 80%;
+  width: 60%;
   text-align: center;
 `;
 

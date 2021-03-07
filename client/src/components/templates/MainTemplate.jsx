@@ -19,7 +19,6 @@ const FullScreen = styled.div`
   z-index: 30;
 `;
 
-const modal = true;
 const MainTemplate = ({
   location,
   google,
