@@ -6,6 +6,7 @@ import useGetLocation from '../../hooks/location/useGetLocation';
 import useLoginModal from '../../hooks/modal/useLoginModal';
 import useRequestAuthorizationCode from '../../hooks/auth/useRequestAuthorizationCode';
 import useSocialLogin from '../../hooks/auth/useSocialLogin';
+import useGetGoods from '../../hooks/goods/useGetGoods';
 
 const MainPages = ({ history }) => {
   const { location, errorMessage, getLocation } = useGetLocation();
@@ -15,6 +16,7 @@ const MainPages = ({ history }) => {
     requestKakaoAuthorizationCode,
   } = useRequestAuthorizationCode();
   const { googleLogin, kakaoLogin } = useSocialLogin();
+  const { goods, getGoodsInfo } = useGetGoods();
 
   const handleSocialLogin = () => {
     const url = new URL(window.location.href);
@@ -37,6 +39,7 @@ const MainPages = ({ history }) => {
 
   useEffect(() => {
     getLocation();
+    getGoodsInfo(location);
   }, [location, errorMessage]);
 
   useEffect(() => {
@@ -51,6 +54,7 @@ const MainPages = ({ history }) => {
       handleTypeChange={handleTypeChange}
       google={requestGoogleAuthorizationCode}
       kakao={requestKakaoAuthorizationCode}
+      goods={goods}
     />
   );
 };

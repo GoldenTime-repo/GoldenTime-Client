@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Responsive from '../UI/Atoms/Responsive';
 import Header from '../UI/organisms/Header';
 import LoginModal from '../UI/organisms/LoginModal';
+import Card from '../UI/organisms/Card';
 
 const FullScreen = styled.div`
   position: absolute;
@@ -19,6 +21,11 @@ const FullScreen = styled.div`
   z-index: 30;
 `;
 
+const CardListBlock = styled.section`
+  display: flex;
+  flex-direction: row;
+`;
+
 const MainTemplate = ({
   location,
   google,
@@ -27,10 +34,18 @@ const MainTemplate = ({
   onModal,
   type,
   handleTypeChange,
+  goods,
 }) => {
   return (
     <>
       <Header location={location} onModal={onModal} />
+      <Responsive>
+        <CardListBlock>
+          {goods.map((goodsInfo) => (
+            <Card key={goodsInfo.id} goods={goodsInfo} />
+          ))}
+        </CardListBlock>
+      </Responsive>
       {modal && (
         <FullScreen>
           <LoginModal
