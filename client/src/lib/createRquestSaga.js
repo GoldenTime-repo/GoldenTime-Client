@@ -16,7 +16,7 @@ export default function createRequestSaga(type, request) {
       const response = yield call(request, action.payload);
       yield put({
         type: SUCCESS,
-        payload: response.data.documents[0].address.region_2depth_name,
+        payload: response.data,
       });
     } catch (err) {
       yield put({ type: FAILURE, payload: err.message, error: true });

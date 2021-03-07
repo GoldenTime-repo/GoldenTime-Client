@@ -32,7 +32,7 @@ const locationReducer = handleActions(
   {
     [READ_LOCATION_SUCCESS]: (state, { payload: location }) => ({
       ...state,
-      location,
+      location: location.documents[0].address.region_2depth_name,
       errorMessage: null,
     }),
     [READ_LOCATION_FAILURE]: (state, { payload: errorMessage }) => ({

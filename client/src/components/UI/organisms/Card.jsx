@@ -10,10 +10,10 @@ const CardBlock = styled.div`
   width: 500px;
 `;
 
-const Card = () => {
+const Card = ({ goods }) => {
   return (
     <CardBlock>
-      <CardTop />
+      <CardTop goods={goods.thumbnail} />
     </CardBlock>
   );
 };
