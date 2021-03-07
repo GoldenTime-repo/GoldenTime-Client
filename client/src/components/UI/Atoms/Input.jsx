@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 
 const InputStyle = styled.input`
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem 1rem 2rem;
 
   ${(props) =>
     props.header &&

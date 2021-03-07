@@ -45,7 +45,6 @@ const SocialLabel = styled.fieldset`
   }
 `;
 
-const type = 'login';
 const ModalForm = ({ google, kakao, type }) => {
   return (
     <ModalFormBlock>

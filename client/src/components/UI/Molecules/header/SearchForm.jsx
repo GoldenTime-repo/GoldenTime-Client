@@ -10,6 +10,7 @@ const SearchFormBlock = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
+  margin-left: 3rem;
 `;
 
 const SearchForm = () => {
